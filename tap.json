@@ -1,0 +1,11 @@
+{
+  "$comment": "Every CLI this tap serves. A new one joins by adding an entry; bin/sync-formulae.mjs does the rest from that project's GitHub releases.",
+  "formulae": [
+    {
+      "name": "forgec",
+      "repo": "gmackie/forgec",
+      "desc": "ForgeGraph compiler: one package, equivalent behaviour on Cloudflare, AWS and Node",
+      "license": "Apache-2.0"
+    }
+  ]
+}

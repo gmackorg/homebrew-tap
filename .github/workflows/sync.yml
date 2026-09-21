@@ -1,0 +1,28 @@
+name: Sync formulae
+
+# The tap pulls; projects do not push. A workflow here already has write access here, and a
+# public release is readable without auth — so no project needs to hold a credential for this
+# repository. Releases are picked up within the schedule interval; `workflow_dispatch` syncs
+# immediately when you do not want to wait.
+on:
+  schedule:
+    - cron: "17,47 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: "24.x" }
+      - run: node bin/sync-formulae.mjs
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
