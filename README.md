@@ -12,7 +12,10 @@ The `homebrew-` prefix is what makes `gmackorg/tap/...` resolve; you never type 
 
 | formula | what it is |
 | --- | --- |
-| [`forgec`](Formula/forgec.rb) | the ForgeGraph compiler: one package, equivalent behaviour on Cloudflare, AWS and Node |
+| `forgec` | the [ForgeGraph compiler](https://github.com/gmackie/forgec): one package, equivalent behaviour on Cloudflare, AWS and Node |
+
+Formulae appear under `Formula/` as each project cuts its first release; the
+table above lists what is on its way as well as what has landed.
 
 ## How these get here
 
