@@ -19,9 +19,6 @@ class Forgec < Formula
     if Hardware::CPU.arm?
       url "https://github.com/gmackie/forgec/releases/download/v0.4.0/forgec-0.4.0-aarch64-unknown-linux-gnu.tar.gz"
       sha256 "cd7cf42723ffbb7ca0859951eb313ca25e775ea68466b873533ac6b79aada5e3"
-    elsif Hardware::CPU.intel?
-      url "https://github.com/gmackie/forgec/releases/download/v0.4.0/forgec-0.4.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bb7c588bb37e2fd3230bed427a4619b5f0d1282dc0e54f07f0503f1f96fca434"
     end
   end
 
